@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Account Manager</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/table.css" rel="stylesheet">
+
+
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Manage Students</a></li>
+                        <li><a href="#">Cohort</a></li>
+                        <li><a href="#">Hiring Partners</a></li>
+                        <li><a href="#">To Do</a></li>
+                        <li><a href="#">Manage Accounts</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding-top: 51px;">
+            <div>
+
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div class="container  col-md-12">
+                        <div  style="float:left;">
+
+                            <h2 >To Do</h2>
+
+
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#addtodo"><span class="glyphicon glyphicon-plus"></span> Add To Do</button>
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#search">Search</button>
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="addtodo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                New To do
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="enterStudent">Student</label>
+                                                    <input type="student" class="form-control" id="enterStudent" placeholder="Enter student">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterCohort">Cohort</label>
+                                                    <input type="cohort" class="form-control" id="enterCohort" placeholder="Enter cohort">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterEmployer">Employer</label>
+                                                    <input type="employer" class="form-control" id="enterEmployer" placeholder="Enter employer">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterDueDate">Due Date</label>
+                                                    <input type="duedate" class="form-control" id="enterDueDate" placeholder="Enter due date">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterNote">Note</label>
+                                                    <textarea type="note"class="form-control" rows="3" id="enterNote" placeholder="Enter note"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                New To do
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="enterStudent">Student</label>
+                                                    <input type="searchstudent" class="form-control" id="enterStudent" placeholder="Search student">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterCohort">Cohort</label>
+                                                    <input type="searchcohort" class="form-control" id="enterCohort" placeholder="Search cohort">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterEmployer">Employer</label>
+                                                    <input type="searchemployer" class="form-control" id="enterEmployer" placeholder="Search employer">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterDueDate">Due Date</label>
+                                                    <input type="searchduedate" class="form-control" id="enterDueDate" placeholder="Search due date">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!table data>
+    <div class="container-fluid" style="padding-top: 20px;padding-bottom:51px" >
+        <div class="col-md-10 col-md-offset-1 ">
+            <div class="container  col-md-12">
+                <!table data>
+                <div class="table-responsive">
+                    <table class="names-table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Cohort</th>
+                                <th>Employer</th>
+                                <th>Due Date</th>
+                                <th >Note</th>
+                                <th>Edit&#160&#160&#160&#160&#160&#160</th>
+                            </tr>
+                        </thead>
+                        <tbody class="names-table">
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td>Q: Did you hear about the guy they found dead with his head in his cornflakes?
+
+                                    A: The police thought it was a cereal killer.</td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">SWC Guild</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                var name
+                $("#names-table").tablesorter();
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

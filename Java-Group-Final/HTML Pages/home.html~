@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Account Manager</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/table.css" rel="stylesheet">
+
+        <script language="javascript">
+            function MouseRollover1(managestudents_red) {
+                managestudents_red.src = "pics/managestudents_red.png";
+            }
+            function MouseOut1(managestudents_black) {
+                managestudents_black.src = "pics/managestudents_black.png";
+            }
+            function MouseRollover2(cohorts_red) {
+                cohorts_red.src = "pics/cohorts_red.png";
+            }
+            function MouseOut2(cohorts_black) {
+                cohorts_black.src = "pics/cohorts_black.png";
+            }
+            function MouseRollover3(hiringpartners_red) {
+                hiringpartners_red.src = "pics/hiringpartners_red.png";
+            }
+            function MouseOut3(hiringpartners_black) {
+                hiringpartners_black.src = "pics/hiringpartners_black.png";
+            }
+            function MouseRollover4(todo_red) {
+                todo_red.src = "pics/todo_red.png";
+            }
+            function MouseOut4(todo_black) {
+                todo_black.src = "pics/todo_black.png";
+            }
+        </script>
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="students.html">Manage Students</a></li>
+                        <li><a href="cohorts.html">Cohorts</a></li>
+                        <li><a href="#">Hiring Partners</a></li>
+                        <li><a href="#">To Do</a></li>
+                        <li><a href="#">Manage Accounts</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container-fluid floatleft" style="padding-top: 150px; padding-right: 350px">
+                <a href="students.html" class="icons">
+                <div class="col-sm-offset-5 col-sm-2">
+                    <!--The rollover image displays here.-->
+                    <img src="pics/managestudents_black.png" class="img-responsive floatleft" border="0px" data-toggle="tooltip" title="Manage Students"
+                    onMouseOver="MouseRollover1(this)" 
+                    onMouseOut="MouseOut1(this)" />
+                </div></a>
+            </div>
+
+            <div class="container-fluid floatleft" style="padding-top: 51px; padding-right: 350px">
+                <a href="cohorts.html" class="icons">
+                <div class="col-sm-offset-5 col-sm-2">
+                    <!--The rollover image displays here.-->
+                    <img src="pics/cohorts_black.png" class="img-responsive" border="0px" data-toggle="tooltip" title="Cohorts" 
+                    onMouseOver="MouseRollover2(this)"
+                    onMouseOut="MouseOut2(this)" />
+                </div></a>
+            </div>
+        </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://swcguild.com/">SWC Guild</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                var name
+                $("#names-table").tablesorter();
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+
+table.names-table{
+    
+    width:100%;
+    height:750;
+    border-collapse:separate;
+    empty-cells: show;
+    
+    
+    
+}
+
+td {    
+  
+  max-width:150px;
+   
+  
+  word-wrap: normal;
+}
+
+.edit-column{
+    width:10px;
+}
+
+tr a{
+    color:#333;
+    
+}
+
+
+tbody.names-table>tr{
+    height:30px;
+    
+}

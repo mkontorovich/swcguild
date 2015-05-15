@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Account Manager</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/table.css" rel="stylesheet">
+
+
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Manage Students</a></li>
+                        <li><a href="#">Cohort</a></li>
+                        <li><a href="#">Hiring Partners</a></li>
+                        <li><a href="#">To Do</a></li>
+                        <li><a href="#">Manage Accounts</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding-top: 51px;">
+            <div>
+
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div class="container  col-md-12">
+                        <div  style="float:left;">
+
+
+
+
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#addtodo"><span class="glyphicon glyphicon-plus"></span> Add User</button>
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#search">Search</button>
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="addtodo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                New User
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="enterUserName">User Name</label>
+                                                    <input type="userName" class="form-control" id="enterUserName" placeholder="Enter User Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterFirstName">First Name </label>
+                                                    <input type="firstName" class="form-control" id="enterFirstName" placeholder="Enter First Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterLastName">Last Name</label>
+                                                    <input type="lastName" class="form-control" id="enterLastName" placeholder="Enter Last Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterEmail">Email </label>
+                                                    <input type="email" class="form-control" id="enterEmail" placeholder="Enter Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterPassword">Password</label>
+                                                    <input type="Password" class="form-control" id="enterPassword" placeholder="Enter Password">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+						Search Users
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="enterUserName">Username</label>
+                                                    <input type="searchUserName" class="form-control" id="enterUserName" placeholder="Search UserName">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterFirstName">First Name</label>
+                                                    <input type="searchFirstName" class="form-control" id="enterFirstName" placeholder="Search First Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="enterLastName">Last Name</label>
+                                                    <input type="searchLastName" class="form-control" id="enterLastName" placeholder="Search Last Name">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!table data>
+    <div class="container-fluid" style="padding-top: 20px;padding-bottom:51px" >
+        <div class="col-md-10 col-md-offset-1 ">
+            <div class="container  col-md-12">
+                <!table data>
+                <div class="table-responsive">
+                    <table class="names-table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>User Name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th >Password</th>
+                                <th>Edit&#160&#160&#160&#160&#160&#160</th>
+                            </tr>
+                        </thead>
+                        <tbody class="names-table">
+                            <tr>
+                                <td>CoolDude</td>
+                                <td>John </td>
+                                <td>Smith</td>
+                                <td>John@aol.com</td>
+                                <td>********</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                        
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td></td>
+                                <td></td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" style="color:white;">SWC Guild</a></li>
+                    <li><a href="#" style="color:white;">Contact Us</a></li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                var name
+                $("#names-table").tablesorter();
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

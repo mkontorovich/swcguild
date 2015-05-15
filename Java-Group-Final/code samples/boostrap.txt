@@ -1,0 +1,96 @@
+Tables:
+http://getbootstrap.com/css/#tables
+http://getbootstrap.com/components/#panels-tables
+
+Pop Up Forms:
+http://getbootstrap.com/javascript/#modals
+http://getbootstrap.com/css/#forms-example
+
+Navigation:
+http://getbootstrap.com/components/#nav
+http://getbootstrap.com/components/#navbar
+
+Rollovers:
+http://getbootstrap.com/javascript/#tooltips
+http://getbootstrap.com/javascript/#popovers
+
+Image Assets:
+http://getbootstrap.com/css/#images
+http://getbootstrap.com/components/#glyphicons-how-to-use
+
+=========================================================================
+
+IMAGES
+
+//every time we use an image, use this code. the alt would be whatever it's linking to, or just info about it. i'm thinking that with the alt, maybe we don't need tooltip rollovers. or we can take the alt out and use the tooltip rollovers instead. but we probably shouldn't have both.
+<img src="..." class="img-responsive" alt="Responsive image">
+
+//every time we use an icon (glyphicon), which are those small images that users would click to edit  or delete fields, we use the span class, which will look like this:
+<span class="glyphicon glyphicon-search"></span>
+This code itself is what will show the glyphicon. So you need to put it exactly where that icon will go. To search for them, you need to 'inspect element' on this page: http://getbootstrap.com/components/#glyphicons-glyphs. Inside the <li> element, it's the first span tag. If you tap the down arrow in that, it looks like there's a ::before that can be put in the tag. This should be looked into. And you can put them into other types of inputs, for instance buttons.
+
+=========================================================================
+
+ROLLOVERS
+
+Tooltip on left:
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+Tooltip on right:
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+=========================================================================
+
+FORMS
+
+Modal:
+
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+Form that goes within the modal:
+
+
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+=========================================================================
+

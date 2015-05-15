@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Hiring Partners</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/table.css" rel="stylesheet">
+
+
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Manage Students</a></li>
+                        <li><a href="#">Cohort</a></li>
+                        <li class="active"><a href="#">Hiring Partners</a></li>
+                        <li><a href="#">To Do</a></li>
+                        <li><a href="#">Manage Accounts</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding-top: 51px;">
+            <div>
+
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div class="container  col-md-12">
+                        <div  style="float:left;">
+
+                            <h2 >Hiring Partners</h2>
+
+
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#addcompany"><span class="glyphicon glyphicon-plus"></span> Add Hiring Partner</button>
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#addcontact"><span class="glyphicon glyphicon-plus"></span> Add Contact</button>
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#search">Search</button>
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="addcompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Add a Hiring Partner
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="company_name">Company Name</label>
+                                                    <input type="text" class="form-control" id="company_name" placeholder="Enter company name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="tier">Tier</label>
+                                                    <input type="text" class="form-control" id="tier" placeholder="Enter tier">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="status">Status</label>
+                                                    <input type="text" class="form-control" id="status" placeholder="Enter status">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="company_phone">Company Phone</label>
+                                                    <input type="text" class="form-control" id="company_phone" placeholder="Enter phone number">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="company_address">Company Address</label>
+                                                    <input type="text" class="form-control" id="company_address" placeholder="Enter address">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="addcontact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Add a Contact
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="company_name">Company Name</label>
+                                                    <input type="text" class="form-control" id="company_name" placeholder="Enter company name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="first_name">First Name</label>
+                                                    <input type="text" class="form-control" id="first_name" placeholder="Enter first name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="last_name">Last Name</label>
+                                                    <input type="text" class="form-control" id="last_name" placeholder="Enter last name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="phone">Phone</label>
+                                                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text"class="form-control" id="email" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">Address</label>
+                                                    <input type="text"class="form-control" id="address" placeholder="Enter address">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="note">Note</label>
+                                                    <input type="text"class="form-control" id="note" placeholder="Enter note">
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal Add -->
+                            <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                Search
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form roll="form">
+                                                <div class="form-group">
+                                                    <label for="company_name">Company Name</label>
+                                                    <input type="text" class="form-control" id="company_name" placeholder="Search Company names">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="tier">Tier</label>
+                                                    <input type="text" class="form-control" id="tier" placeholder="Search tiers">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="status">Status</label>
+                                                    <input type="text" class="form-control" id="status" placeholder="Search statuses">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="first_name">First Name</label>
+                                                    <input type="text" class="form-control" id="first_name" placeholder="Search first names">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="last_name">Last Name</label>
+                                                    <input type="text" class="form-control" id="last_name" placeholder="Search last names">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="text" class="form-control" id="email" placeholder="Search emails">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address">Address</label>
+                                                    <input type="text" class="form-control" id="address" placeholder="Search addresses">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!table data>
+    <div class="container-fluid" style="padding-top: 20px;padding-bottom:51px" >
+        <div class="col-md-10 col-md-offset-1 ">
+            <div class="container  col-md-12">
+                <!table data>
+                <div class="table">
+                    <table class="names-table table-hover table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Tier</th>
+                                <th>Status</th>
+                                <th>Contact Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Note</th>
+                                <th>Edit&#160&#160&#160&#160&#160&#160</th>
+                            </tr>
+                        </thead> 
+                        <tbody class="names-table">
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Acme Co Ltd</td>
+                                <td>1</td>
+                                <td>Prospect</td>
+                                <td>John Smith</td>
+                                <td>1234567890</td>
+                                <td>johnsmith@gmail.com</td>
+                                <td>Good guy!</td>
+                                <td class="edit-column">&#160<span class="glyphicon glyphicon-pencil">&#160</span><span class="glyphicon glyphicon-remove">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">SWC Guild</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                var name
+                $("#names-table").tablesorter();
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

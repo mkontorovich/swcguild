@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Students</title>
+
+        <!--Trying to add bootstrap.js file functinality to this page-->
+
+        <script src="js/bootstrap.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                   
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Manage Students</a></li>
+                        <li><a href="#">Cohort</a></li>
+                        <li><a href="#">Hiring Partners</a></li>
+                        <li><a href="#">Manage Accounts</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="padding-top: 51px;">
+            <div>
+
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div class="container  col-md-12">
+                        <div  style="float:left;">
+
+                            <h2 >Students</h2>
+
+
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-default btn-danger" data-toggle="modal" data-target="#myModal"><a href="#myModal" role="button" class="btn" data-toggle="modal"></a><span class="glyphicon glyphicon-plus"></span> Add Student</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">
+                                                New Student
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                First Name: <input type="text" name="fName"><br>
+                                                Last Name: <input type="text" name="lName"><br>
+                                                Street: <input type="text" name="street"><br>
+                                                City: <input type="text" name="city"><br>
+                                                State: <input type="text" name="state"><br>
+                                                Zip code: <input type="text" name="zip_code"><br>
+                                                Phone: <input type="text" name="phone"><br>
+                                                Email: <input type="text" name="email"><br>
+                                                Date of Application: <input type="text" name="date_of_application"><br>
+                                                Aptitude Test Score: <input type="text" name="aptitude_test_score"><br>
+                                                Cohort ID: <input type="text" name="cohort_id"><br>
+                                                Employer ID: <input type="text" name="employer_id"><br>
+                                                Housing: <input type="text" name="housing"><br>
+                                                Status: <input type="text" name="status"><br>
+                                                Student Bio: <input type="text" name="student_bio"><br>
+                                                Student Resume: <input type="text" name="student_resume"><br>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+<!--HTML from Bootstrap for modal window I just added this this morning
+
+                            <a href="#myModal" role="button" class="btn" data-toggle="modal"></a>
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Modal header</h3>
+    </div>
+    <div class="modal-body">
+        <form id="myForm" method="post">
+          <input type="hidden" value="hello" id="myField">
+            <button id="myFormSubmit" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-primary" onclick="function()">Save changes</button>
+    </div>
+</div>
+
+
+<!--js file for modal functionality -->
+<!--<script>
+$(function(){
+    $('#myFormSubmit').click(function(e){
+      e.preventDefault();
+      alert($('#myField').val());
+      /*
+      $.post('http://path/to/post', 
+         $('#myForm').serialize(), 
+         function(data, status, xhr){
+           // do something here with response;
+         });
+      */
+    });
+});
+
+</script>-->
+
+                        </div>
+                        <div style="float:right;padding-top: 65px;">
+                            <form>
+                                Search: <input type="text" class="search">
+                            </form>
+                        </div>
+
+                        <!table data>
+                        <div class="table-responsive">
+                            <table id="names-table" class="table table-striped ">
+                                <thead>
+                                    <tr>
+                                        <th>Student ID</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Cohort ID</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1,001</td>
+                                        <td>Lorem</td>
+                                        <td>ipsum</td>
+                                        <td>dolor</td>
+                                        <td>sit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,002</td>
+                                        <td>amet</td>
+                                        <td>consectetur</td>
+                                        <td>adipiscing</td>
+                                        <td>elit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,003</td>
+                                        <td>Integer</td>
+                                        <td>nec</td>
+                                        <td>odio</td>
+                                        <td>Praesent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,003</td>
+                                        <td>libero</td>
+                                        <td>Sed</td>
+                                        <td>cursus</td>
+                                        <td>ante</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,004</td>
+                                        <td>dapibus</td>
+                                        <td>diam</td>
+                                        <td>Sed</td>
+                                        <td>nisi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,005</td>
+                                        <td>Nulla</td>
+                                        <td>quis</td>
+                                        <td>sem</td>
+                                        <td>at</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,006</td>
+                                        <td>nibh</td>
+                                        <td>elementum</td>
+                                        <td>imperdiet</td>
+                                        <td>Duis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,007</td>
+                                        <td>sagittis</td>
+                                        <td>ipsum</td>
+                                        <td>Praesent</td>
+                                        <td>mauris</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,008</td>
+                                        <td>Fusce</td>
+                                        <td>nec</td>
+                                        <td>tellus</td>
+                                        <td>sed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,009</td>
+                                        <td>augue</td>
+                                        <td>semper</td>
+                                        <td>porta</td>
+                                        <td>Mauris</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,010</td>
+                                        <td>massa</td>
+                                        <td>Vestibulum</td>
+                                        <td>lacinia</td>
+                                        <td>arcu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,011</td>
+                                        <td>eget</td>
+                                        <td>nulla</td>
+                                        <td>Class</td>
+                                        <td>aptent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,012</td>
+                                        <td>taciti</td>
+                                        <td>sociosqu</td>
+                                        <td>ad</td>
+                                        <td>litora</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,013</td>
+                                        <td>torquent</td>
+                                        <td>per</td>
+                                        <td>conubia</td>
+                                        <td>nostra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,014</td>
+                                        <td>per</td>
+                                        <td>inceptos</td>
+                                        <td>himenaeos</td>
+                                        <td>Curabitur</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,015</td>
+                                        <td>sodales</td>
+                                        <td>ligula</td>
+                                        <td>in</td>
+                                        <td>libero</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-fluid" style="background-color:#333">
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Some Information</a></li>
+                        <li><a href="#">Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </footer>
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    var name
+                    $("#names-table").tablesorter();
+                });
+            });
+ 
+        </script>
+
+
+    </body>
+</html>
